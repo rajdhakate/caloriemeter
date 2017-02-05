@@ -21,35 +21,31 @@ IB_DESIGNABLE
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self animateIn];
+    self.calorieIconImageView.alpha = 0;
+    
+    [self animateInLogo];
+    
+    [self animateInUI];
     
     self.loginButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 8, 0);
     self.loginButton.enabled = false;
     [self.emailTextField addTarget:self action:@selector(textFieldDidBeginEditing:) forControlEvents:UIControlEventEditingChanged];
+    
+    
         
 }
 
 
 #pragma mark - Animate View 
 
-- (void) animateIn {
- 
-    self.calorieIconImageView.alpha = 1;
-    
-    /*
-    [UIView animateWithDuration:0.5 animations:^{
-        self.calorieIconImageView.image = [UIImage imageNamed:@"calorie_meter_login_icon.png"];
-        self.calorieIconImageView.alpha = 1;
-    } completion:nil];
-    */
-
-    self.calorieIconImageView.image = [UIImage imageNamed:@"calorie_meter_login_icon.png"];
+- (void) animateInLogo {
 
     self.calorieIconImageView.frame = CGRectMake(67, -160, 240, 128);
     // begin animation block
     [UIView beginAnimations:@"animate" context: nil];
     [UIView setAnimationDuration:1];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    self.calorieIconImageView.alpha = 1;
     self.calorieIconImageView.frame = CGRectMake (67, 95, 240, 128);
     // commit frame changes to be animated
     [UIView commitAnimations];
@@ -57,6 +53,35 @@ IB_DESIGNABLE
     
 }
 
+
+
+- (void) animateInUI {
+    
+    self.emailTextField.alpha = 0;
+    self.passwordTextField.alpha = 0;
+    self.loginButton.alpha = 0;
+    self.emailLabel.alpha = 0;
+    self.passwordLabel.alpha = 0;
+    self.dividerView.alpha = 0;
+    self.gotoSignUpButton.alpha = 0;
+    self.facebookButtonView.alpha = 0;
+    self.googleButtonView.alpha = 0;
+    
+     [UIView animateWithDuration:2 animations:^{
+     
+         self.emailTextField.alpha = 1;
+         self.passwordTextField.alpha = 1;
+         self.loginButton.alpha = 1;
+         self.emailLabel.alpha = 1;
+         self.passwordLabel.alpha = 1;
+         self.dividerView.alpha = 1;
+         self.gotoSignUpButton.alpha = 1;
+         self.facebookButtonView.alpha = 1;
+         self.googleButtonView.alpha = 1;
+         
+     } completion:nil];
+    
+}
 
 
 #pragma mark - Enable Login Button

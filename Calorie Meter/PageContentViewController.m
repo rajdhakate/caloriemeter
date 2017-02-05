@@ -25,6 +25,7 @@
     [self.hasSeenDemoScreens synchronize];
     
     [self loadPagesData];
+    
 }
 
 
@@ -36,6 +37,8 @@
     if (self.pageIndex == 2) {
         self.doneButton.alpha = 1;
     }
+    
+    
     
 }
 

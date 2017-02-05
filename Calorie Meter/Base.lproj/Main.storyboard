@@ -341,8 +341,17 @@
                     <view key="view" contentMode="scaleToFill" id="uMC-jp-b63">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="GRd-Rh-kev">
+                                <rect key="frame" x="168" y="512" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="pageIndicator" destination="GRd-Rh-kev" id="DWy-cK-Z9l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mud-QF-khY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -430,7 +439,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Fy3-n1-6cD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-aN-YL0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calorie_meter_login_icon" translatesAutoresizingMaskIntoConstraints="NO" id="a0x-aN-YL0">
                                 <rect key="frame" x="67" y="95" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -512,8 +521,14 @@
                     </view>
                     <connections>
                         <outlet property="calorieIconImageView" destination="a0x-aN-YL0" id="YY2-4D-TyT"/>
+                        <outlet property="dividerView" destination="qjd-gS-oOs" id="ATq-Sw-ktc"/>
+                        <outlet property="emailLabel" destination="8eD-D7-tT2" id="aSC-WH-Xxn"/>
                         <outlet property="emailTextField" destination="pUM-GC-f1v" id="ood-gO-1j6"/>
+                        <outlet property="facebookButtonView" destination="Ahi-Ia-x6P" id="GC0-KE-92a"/>
+                        <outlet property="googleButtonView" destination="bVf-Ev-UPB" id="XtG-H2-LBx"/>
+                        <outlet property="gotoSignUpButton" destination="2o9-Xy-t3C" id="U07-2x-a2G"/>
                         <outlet property="loginButton" destination="vTL-zG-F5l" id="O5F-Wj-XYb"/>
+                        <outlet property="passwordLabel" destination="MlX-1t-njA" id="WmL-Js-Pmw"/>
                         <outlet property="passwordTextField" destination="Gt2-mU-you" id="3fI-i2-hzl"/>
                     </connections>
                 </viewController>

@@ -26,6 +26,11 @@
     pageLabelArray = @[@"knows your BMI", @"meters your calories", @"gives healthy suggestions"];
     
     [self initializeGettingStartedPages];
+    
+    [self.view bringSubviewToFront:self.pageIndicator];
+    [self.pageIndicator setNumberOfPages:3];
+    
+    
 }
 
 
@@ -53,6 +58,8 @@
     
     NSUInteger index = ((PageContentViewController *)viewController).pageIndex;
     
+    [self.pageIndicator setCurrentPage:index];
+    
     if (index == 0 || index == NSNotFound) {
         return nil;
     }
@@ -64,19 +71,16 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
-    
     NSUInteger index = ((PageContentViewController *)viewController).pageIndex;
     
+    [self.pageIndicator setCurrentPage:index];
     
-    if (index == NSNotFound) {
-        return nil;
-    }
     index++;
     
     if (index == [pageImageArray count]) {
         return nil;
     }
-    
+
     return [self viewControllerAtIndex:index];
 }
 
@@ -94,29 +98,42 @@
     pvc.pageLabelString = [pageLabelArray objectAtIndex:index];
     pvc.pageImageString = [pageImageArray objectAtIndex:index];
     pvc.pageIndex = index;
-    
     return pvc;
+}
+
+
+#pragma marl - Page Indicators
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
+    
+    PageContentViewController *pvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
+    
+    self.pageIndicator.currentPage = pvc.pageIndex;
     
 }
 
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 /*
-#pragma mark - Navigation
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+    // The number of items reflected in the page indicator.
+    NSInteger tutorialSteps = 3;
+    [self.pageIndicator setNumberOfPages:tutorialSteps];
+    
+    return tutorialSteps;
+}
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+    // The selected item reflected in the page indicator.
+    return 0;
 }
 */
+
+
+
+
+
+
+
+
+
 
 @end

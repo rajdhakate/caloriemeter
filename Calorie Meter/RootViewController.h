@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "PageContentViewController.h"
 
-@interface RootViewController : UIViewController <UIPageViewControllerDataSource>
+@interface RootViewController : UIViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property UIPageViewController *pageView;
 
 - (PageContentViewController*)viewControllerAtIndex:(NSUInteger)index;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageIndicator;
 
 @end
