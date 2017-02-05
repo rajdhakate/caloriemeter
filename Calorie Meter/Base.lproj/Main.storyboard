@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diB-rc-MsU" id="A1z-JD-Lkb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item.png" translatesAutoresizingMaskIntoConstraints="NO" id="iYV-HU-5KN">
@@ -315,7 +315,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AuK-Sm-Tx7" id="gpG-st-hiG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -381,7 +381,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcs-6H-sTM" customClass="GettingStartedButton">
-                                <rect key="frame" x="107" y="550" width="160" height="60"/>
+                                <rect key="frame" x="107" y="550" width="160" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                 <state key="normal" title="NEXT" backgroundImage="button">
@@ -463,7 +463,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTL-zG-F5l">
-                                <rect key="frame" x="112" y="453" width="150" height="60"/>
+                                <rect key="frame" x="112" y="453" width="150" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                 <state key="normal" title="LOGIN" backgroundImage="button">
@@ -481,12 +481,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjd-gS-oOs" userLabel="Divider">
-                                <rect key="frame" x="16" y="590" width="343" height="1"/>
+                                <rect key="frame" x="16" y="610" width="343" height="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o9-Xy-t3C">
-                                <rect key="frame" x="84" y="605" width="206" height="15"/>
+                                <rect key="frame" x="84" y="630" width="206" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <state key="normal" title="Not a member yet? Sign up.">
@@ -580,7 +580,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yt-II-QYc">
-                                <rect key="frame" x="112" y="526" width="150" height="60"/>
+                                <rect key="frame" x="112" y="526" width="150" height="67"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                 <state key="normal" title="SIGNUP" backgroundImage="button">
@@ -591,12 +591,20 @@
                                 <rect key="frame" x="67" y="127" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9T-RO-ifl">
-                                <rect key="frame" x="27" y="28" width="25" height="40"/>
+                            <view alpha="0.34999999403953552" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zs0-Hw-RnR" userLabel="Divider">
+                                <rect key="frame" x="16" y="610" width="343" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zz3-35-w3p">
+                                <rect key="frame" x="84" y="623" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="previous"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Already a member? Sign In.">
+                                    <color key="titleColor" red="0.31372549020000001" green="0.89019607840000003" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="F6y-dE-gmj" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pBN-Za-Hal"/>
+                                    <segue destination="F6y-dE-gmj" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="DCr-LF-3VH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -645,7 +653,6 @@
         <image name="heart.png" width="512" height="512"/>
         <image name="item.png" width="512" height="512"/>
         <image name="login_bg" width="414" height="736"/>
-        <image name="previous" width="90" height="144"/>
         <image name="time.png" width="512" height="512"/>
         <image name="uncheck" width="207" height="207"/>
     </resources>
