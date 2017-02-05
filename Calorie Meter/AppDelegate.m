@@ -17,6 +17,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+#pragma mark - Show either Getting Started Screens or Login Screen
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenDemoScreens"]) {
+    
+        UIViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        self.window.rootViewController = loginViewController;
+        
+    }
+    else {
+        
+        UIViewController *gettingStratedViewController = [storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
+        self.window.rootViewController = gettingStratedViewController;
+    
+    }
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

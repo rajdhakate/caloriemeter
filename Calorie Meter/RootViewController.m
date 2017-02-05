@@ -12,7 +12,6 @@
 {
     NSArray *pageImageArray;
     NSArray *pageLabelArray;
-    NSUserDefaults *hasSeenDemoScreens;
 }
 
 @end
@@ -25,29 +24,9 @@
 
     pageImageArray = @[@"BMI.png", @"calories_food.png", @"healthy_body.png"];
     pageLabelArray = @[@"knows your BMI", @"meters your calories", @"gives healthy suggestions"];
-
-    hasSeenDemoScreens = [NSUserDefaults standardUserDefaults];
-    [hasSeenDemoScreens setBool:false forKey:@"hasSeenDemoScreens"];
-    [self checkUserSeenDemoScreens];
-    [hasSeenDemoScreens synchronize];
+    
+    [self initializeGettingStartedPages];
 }
-
-
-- (void) checkUserSeenDemoScreens {
-    
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenDemoScreens"] == false) {
-        [self initializeGettingStartedPages];
-    }
-    else
-    {
-        UIViewController *vc = [[self storyboard]instantiateViewControllerWithIdentifier:@"GetInViewController"];
-        [self presentViewController:vc animated:YES completion:nil];
-    }
-    
-    [hasSeenDemoScreens setBool:TRUE forKey:@"hasSeenDemoScreens"];
-    
-}
-
 
 
 #pragma mark - Intialize Page View Controller

@@ -24,7 +24,6 @@
 		D546114A1E3E480200C1A45D /* item.png in Resources */ = {isa = PBXBuildFile; fileRef = D54611491E3E480200C1A45D /* item.png */; };
 		D546114D1E3E4A2B00C1A45D /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = D546114C1E3E4A2B00C1A45D /* heart.png */; };
 		D546114F1E3E4B2400C1A45D /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = D546114E1E3E4B2400C1A45D /* time.png */; };
-		D54611511E3E5A9C00C1A45D /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D54611501E3E5A9C00C1A45D /* launch.jpg */; };
 		D54611561E3E5BAE00C1A45D /* ListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D54611551E3E5BAE00C1A45D /* ListTableView.m */; };
 		D54611591E3E5BFA00C1A45D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D54611581E3E5BFA00C1A45D /* ListTableViewCell.m */; };
 		D5CCC8FC1E43177E006C5917 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCC8FB1E43177E006C5917 /* Food.m */; };
@@ -58,7 +57,6 @@
 		D54611491E3E480200C1A45D /* item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item.png; sourceTree = "<group>"; };
 		D546114C1E3E4A2B00C1A45D /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
 		D546114E1E3E4B2400C1A45D /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
-		D54611501E3E5A9C00C1A45D /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		D54611541E3E5BAE00C1A45D /* ListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableView.h; sourceTree = "<group>"; };
 		D54611551E3E5BAE00C1A45D /* ListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableView.m; sourceTree = "<group>"; };
 		D54611571E3E5BFA00C1A45D /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
@@ -164,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				D546113A1E3E464700C1A45D /* LaunchScreen.storyboard */,
-				D54611501E3E5A9C00C1A45D /* launch.jpg */,
 			);
 			name = "Launch Screen";
 			sourceTree = "<group>";
@@ -250,7 +247,6 @@
 			files = (
 				D546113C1E3E464700C1A45D /* LaunchScreen.storyboard in Resources */,
 				D54611481E3E47F700C1A45D /* food.png in Resources */,
-				D54611511E3E5A9C00C1A45D /* launch.jpg in Resources */,
 				D546114F1E3E4B2400C1A45D /* time.png in Resources */,
 				D546114A1E3E480200C1A45D /* item.png in Resources */,
 				D54611451E3E476200C1A45D /* calories.png in Resources */,

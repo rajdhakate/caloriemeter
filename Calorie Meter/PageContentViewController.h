@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GettingStartedButton.h"
 
 @interface PageContentViewController : UIViewController
 
@@ -16,5 +17,9 @@
 @property NSString *pageImageString;
 @property NSString *pageLabelString;
 @property NSUInteger pageIndex;
+@property NSUserDefaults *hasSeenDemoScreens;
+
+@property (weak, nonatomic) IBOutlet GettingStartedButton *doneButton;
+- (IBAction)doneAction:(id)sender;
 
 @end

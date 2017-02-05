@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
+{
+}
 
 @end
 
@@ -19,12 +21,12 @@ IB_DESIGNABLE
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     [self animateIn];
     
     self.loginButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 8, 0);
     self.loginButton.enabled = false;
     [self.emailTextField addTarget:self action:@selector(textFieldDidBeginEditing:) forControlEvents:UIControlEventEditingChanged];
+        
 }
 
 
@@ -65,7 +67,12 @@ IB_DESIGNABLE
 }
 
 
+#pragma mark - is a fresh user
 
+- (Boolean) isAFreshUser {
+    
+    return true;
+}
 
 
 

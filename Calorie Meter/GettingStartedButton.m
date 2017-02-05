@@ -19,8 +19,7 @@
 */
 
 - (UIEdgeInsets)titleEdgeInsets {
-    CGFloat space = 5;
-    return UIEdgeInsetsMake(space, 0, 0, 0);
+    return UIEdgeInsetsMake(0, 0, 6, 0);
 }
 
 @end

@@ -16,7 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.doneButton.alpha = 0;
+    
+    self.hasSeenDemoScreens = [NSUserDefaults standardUserDefaults];
+    [self.hasSeenDemoScreens setBool:false forKey:@"hasSeenDemoScreens"];
+    
+    [self.hasSeenDemoScreens synchronize];
     
     [self loadPagesData];
 }
@@ -27,26 +33,20 @@
     self.pageImageView.image = [UIImage imageNamed:self.pageImageString];
     self.pageLabel.text = self.pageLabelString;
     
+    if (self.pageIndex == 2) {
+        self.doneButton.alpha = 1;
+    }
+    
 }
 
 
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)doneAction:(id)sender {
+    
+    UIViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    [self presentViewController:lvc animated:YES completion:nil];
+    
+    [self.hasSeenDemoScreens setBool:true forKey:@"hasSeenDemoScreens"];
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
