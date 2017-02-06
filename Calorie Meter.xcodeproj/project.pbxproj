@@ -13,6 +13,7 @@
 		D522E1421E45F9CD005F44E7 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D522E1411E45F9CD005F44E7 /* PageContentViewController.m */; };
 		D522E1461E45FA1A005F44E7 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D522E1451E45FA1A005F44E7 /* RootViewController.m */; };
 		D522E1491E45FCEA005F44E7 /* GettingStartedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D522E1481E45FCEA005F44E7 /* GettingStartedButton.m */; };
+		D52E36451E48DC3E00353038 /* AskQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52E36441E48DC3E00353038 /* AskQuestionViewController.m */; };
 		D54235581E3F34DD008E3224 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D54235571E3F34DD008E3224 /* DetailViewController.m */; };
 		D546112E1E3E464700C1A45D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D546112D1E3E464700C1A45D /* main.m */; };
 		D54611311E3E464700C1A45D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D54611301E3E464700C1A45D /* AppDelegate.m */; };
@@ -42,6 +43,8 @@
 		D522E1451E45FA1A005F44E7 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		D522E1471E45FCEA005F44E7 /* GettingStartedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GettingStartedButton.h; sourceTree = "<group>"; };
 		D522E1481E45FCEA005F44E7 /* GettingStartedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GettingStartedButton.m; sourceTree = "<group>"; };
+		D52E36431E48DC3E00353038 /* AskQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskQuestionViewController.h; sourceTree = "<group>"; };
+		D52E36441E48DC3E00353038 /* AskQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskQuestionViewController.m; sourceTree = "<group>"; };
 		D54235561E3F34DD008E3224 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		D54235571E3F34DD008E3224 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		D54611291E3E464700C1A45D /* Calorie Meter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Meter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +105,15 @@
 			name = "Getting Started";
 			sourceTree = "<group>";
 		};
+		D52E36461E48DC4D00353038 /* Ask Questions */ = {
+			isa = PBXGroup;
+			children = (
+				D52E36431E48DC3E00353038 /* AskQuestionViewController.h */,
+				D52E36441E48DC3E00353038 /* AskQuestionViewController.m */,
+			);
+			name = "Ask Questions";
+			sourceTree = "<group>";
+		};
 		D54611201E3E464700C1A45D = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +138,7 @@
 				D546113D1E3E464700C1A45D /* Info.plist */,
 				D5CCC8FA1E43177E006C5917 /* Food.h */,
 				D5CCC8FB1E43177E006C5917 /* Food.m */,
+				D52E36461E48DC4D00353038 /* Ask Questions */,
 				D51AE9091E463190002A92B5 /* Login */,
 				D522E1431E45F9DF005F44E7 /* Getting Started */,
 				D54611531E3E5B9000C1A45D /* images */,
@@ -264,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D54235581E3F34DD008E3224 /* DetailViewController.m in Sources */,
+				D52E36451E48DC3E00353038 /* AskQuestionViewController.m in Sources */,
 				D54611561E3E5BAE00C1A45D /* ListTableView.m in Sources */,
 				D522E1491E45FCEA005F44E7 /* GettingStartedButton.m in Sources */,
 				D522E1461E45FA1A005F44E7 /* RootViewController.m in Sources */,
