@@ -102,7 +102,7 @@
 }
 
 
-#pragma marl - Page Indicators
+#pragma mark - Page Indicators
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
     
     PageContentViewController *pvc = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];

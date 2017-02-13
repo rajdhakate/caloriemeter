@@ -8,19 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AskQuestionViewController : UIViewController <UITextFieldDelegate>
+@interface AskQuestionViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *getAnswerTextField;
+@property (weak, nonatomic) IBOutlet UITextField *ageTextField;
+@property (weak, nonatomic) IBOutlet UITextField *feetTextField;
+@property (weak, nonatomic) IBOutlet UITextField *inchesTextField;
+@property (weak, nonatomic) NSString *heightTextField;
+@property (weak, nonatomic) IBOutlet UITextField *weightTextField;
+@property (weak, nonatomic) IBOutlet UIButton *genderButton;
+@property (strong, nonatomic) IBOutlet UIView *popUpView;
+@property (weak, nonatomic) IBOutlet UILabel *bmrLabel;
 
+- (IBAction)genderAction:(UIButton *)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *setQuestionsLabel;
+@property (nonatomic) float BMR;
 
-@property (weak, nonatomic) IBOutlet UIButton *previousButton;
-@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-- (IBAction)previousAction:(id)sender;
+- (IBAction)calculateAction:(id)sender;
 
-- (IBAction)nextAction:(id)sender;
+- (IBAction)okayAction:(id)sender;
 
 
 @end
