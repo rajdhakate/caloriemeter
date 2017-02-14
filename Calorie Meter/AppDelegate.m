@@ -18,6 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // Configure Firebase
+    [FIRApp configure];
     
 #pragma mark - Show either Getting Started Screens or Login Screen
     

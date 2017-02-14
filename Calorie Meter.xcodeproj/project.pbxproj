@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FF8A23A1D73181677A4753 /* libPods-Calorie Meter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A56E6F633E0027919EC321A /* libPods-Calorie Meter.a */; };
 		D51AE9081E463184002A92B5 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51AE9071E463184002A92B5 /* SignUpViewController.m */; };
 		D51AE90C1E46336E002A92B5 /* LoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D51AE90B1E46336E002A92B5 /* LoginTextField.m */; };
 		D51AE90F1E465628002A92B5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51AE90E1E465628002A92B5 /* LoginViewController.m */; };
@@ -27,10 +28,14 @@
 		D546114F1E3E4B2400C1A45D /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = D546114E1E3E4B2400C1A45D /* time.png */; };
 		D54611561E3E5BAE00C1A45D /* ListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D54611551E3E5BAE00C1A45D /* ListTableView.m */; };
 		D54611591E3E5BFA00C1A45D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D54611581E3E5BFA00C1A45D /* ListTableViewCell.m */; };
+		D5C943611E5338860043A7A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5C943601E5338860043A7A8 /* GoogleService-Info.plist */; };
 		D5CCC8FC1E43177E006C5917 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCC8FB1E43177E006C5917 /* Food.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A56E6F633E0027919EC321A /* libPods-Calorie Meter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Calorie Meter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7782556427A26C88209C33 /* Pods-Calorie Meter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calorie Meter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calorie Meter/Pods-Calorie Meter.debug.xcconfig"; sourceTree = "<group>"; };
+		C06FD7CF1DAA0EFBCCBA45F5 /* Pods-Calorie Meter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calorie Meter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calorie Meter/Pods-Calorie Meter.release.xcconfig"; sourceTree = "<group>"; };
 		D51AE9061E463184002A92B5 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = ../SignUpViewController.h; sourceTree = "<group>"; };
 		D51AE9071E463184002A92B5 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = ../SignUpViewController.m; sourceTree = "<group>"; };
 		D51AE90A1E46336E002A92B5 /* LoginTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTextField.h; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		D54611551E3E5BAE00C1A45D /* ListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableView.m; sourceTree = "<group>"; };
 		D54611571E3E5BFA00C1A45D /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
 		D54611581E3E5BFA00C1A45D /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		D5C943601E5338860043A7A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5CCC8FA1E43177E006C5917 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
 		D5CCC8FB1E43177E006C5917 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,12 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FF8A23A1D73181677A4753 /* libPods-Calorie Meter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2D636727EF447ED7AD5F7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E7782556427A26C88209C33 /* Pods-Calorie Meter.debug.xcconfig */,
+				C06FD7CF1DAA0EFBCCBA45F5 /* Pods-Calorie Meter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9C7095C810932D968031A5D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A56E6F633E0027919EC321A /* libPods-Calorie Meter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D51AE9091E463190002A92B5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +143,8 @@
 			children = (
 				D546112B1E3E464700C1A45D /* Calorie Meter */,
 				D546112A1E3E464700C1A45D /* Products */,
+				3D2D636727EF447ED7AD5F7D /* Pods */,
+				9C7095C810932D968031A5D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +179,7 @@
 		D546112C1E3E464700C1A45D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D5C943601E5338860043A7A8 /* GoogleService-Info.plist */,
 				D546112F1E3E464700C1A45D /* AppDelegate.h */,
 				D54611301E3E464700C1A45D /* AppDelegate.m */,
 				D546112D1E3E464700C1A45D /* main.m */,
@@ -207,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D54611401E3E464700C1A45D /* Build configuration list for PBXNativeTarget "Calorie Meter" */;
 			buildPhases = (
+				448081143F3CC9B389833C79 /* [CP] Check Pods Manifest.lock */,
 				D54611251E3E464700C1A45D /* Sources */,
 				D54611261E3E464700C1A45D /* Frameworks */,
 				D54611271E3E464700C1A45D /* Resources */,
+				272F1ED15C54692A4DB47FE3 /* [CP] Embed Pods Frameworks */,
+				0A6AAABD569EB2352E3F3DD8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +290,7 @@
 			files = (
 				D546113C1E3E464700C1A45D /* LaunchScreen.storyboard in Resources */,
 				D54611481E3E47F700C1A45D /* food.png in Resources */,
+				D5C943611E5338860043A7A8 /* GoogleService-Info.plist in Resources */,
 				D546114F1E3E4B2400C1A45D /* time.png in Resources */,
 				D546114A1E3E480200C1A45D /* item.png in Resources */,
 				D54611451E3E476200C1A45D /* calories.png in Resources */,
@@ -270,6 +301,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A6AAABD569EB2352E3F3DD8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calorie Meter/Pods-Calorie Meter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		272F1ED15C54692A4DB47FE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calorie Meter/Pods-Calorie Meter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		448081143F3CC9B389833C79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D54611251E3E464700C1A45D /* Sources */ = {
@@ -406,6 +485,7 @@
 		};
 		D54611411E3E464700C1A45D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7782556427A26C88209C33 /* Pods-Calorie Meter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Calorie Meter/Info.plist";
@@ -417,6 +497,7 @@
 		};
 		D54611421E3E464700C1A45D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06FD7CF1DAA0EFBCCBA45F5 /* Pods-Calorie Meter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Calorie Meter/Info.plist";

@@ -24,6 +24,9 @@ IB_DESIGNABLE
     self.signUpButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 8, 0);
     [self setCheckStates];
     
+    self.emailTextField.textContentType = UITextContentTypeEmailAddress;
+    self.emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
+    
 }
 
 - (void)didReceiveMemoryWarning {

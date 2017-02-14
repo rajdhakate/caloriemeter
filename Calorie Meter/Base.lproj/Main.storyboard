@@ -298,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbn-9S-FhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="741"/>
+            <point key="canvasLocation" x="2111" y="204"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="AGQ-dd-tuz">
@@ -331,7 +331,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dal-ao-i34" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2201" y="-16"/>
+            <point key="canvasLocation" x="2834" y="152"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="p9d-zy-3mv">
@@ -647,6 +647,8 @@
                     </view>
                     <connections>
                         <outlet property="checkButton" destination="hai-C4-Wlw" id="xxM-3q-dq5"/>
+                        <outlet property="emailTextField" destination="l2D-ui-U23" id="0XR-kX-gGp"/>
+                        <outlet property="passwordTextField" destination="dhK-ge-thy" id="fCI-Rm-o6I"/>
                         <outlet property="signUpButton" destination="8yt-II-QYc" id="oqZ-uA-9W8"/>
                     </connections>
                 </viewController>
@@ -848,7 +850,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1448.8" y="-666.11694152923542"/>
+            <point key="canvasLocation" x="1364" y="-623"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XMY-m5-Lev">
@@ -883,7 +885,7 @@
         <image name="uncheck" width="207" height="207"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nDw-Mo-uxw"/>
+        <segue reference="DCr-LF-3VH"/>
         <segue reference="Trd-rj-fKS"/>
     </inferredMetricsTieBreakers>
 </document>

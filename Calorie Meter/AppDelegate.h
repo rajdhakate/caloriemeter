@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PageContentViewController.h"
+#import <FirebaseCore/FirebaseCore.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

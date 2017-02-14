@@ -31,7 +31,8 @@ IB_DESIGNABLE
     self.loginButton.enabled = false;
     [self.emailTextField addTarget:self action:@selector(textFieldDidBeginEditing:) forControlEvents:UIControlEventEditingChanged];
     
-    
+    self.emailTextField.textContentType = UITextContentTypeEmailAddress;
+    self.emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
         
 }
 
