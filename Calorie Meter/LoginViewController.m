@@ -10,7 +10,7 @@
 
 @interface LoginViewController ()
 {
-    //FIRUser *user;
+    
 }
 
 @end
@@ -20,8 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // user = [[FIRAuth auth]currentUser];
-    
+    [self isUserAlreadyLoggedIn];
     
     self.calorieIconImageView.alpha = 0;
     
@@ -36,6 +35,14 @@
     self.emailTextField.textContentType = UITextContentTypeEmailAddress;
     self.emailTextField.keyboardType = UIKeyboardTypeEmailAddress;
         
+}
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    [self isUserAlreadyLoggedIn];
 }
 
 
@@ -98,8 +105,22 @@
 #pragma mark - is a fresh user
 
 - (Boolean) isAFreshUser {
-    
     return true;
+}
+
+
+#pragma mark - Is User Already Logged In
+
+- (void) isUserAlreadyLoggedIn
+{
+
+    if ([[FIRAuth auth] currentUser]) {
+        [self navigateIntoApp];
+    }
+    else
+    {
+        nil;
+    }
 }
 
 
@@ -111,7 +132,7 @@
     UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
     
     [self presentViewController:navVC animated:YES completion:^{
-        NSLog(@"----------User Already Signed In");
+        nil;
     }];
 }
 
@@ -132,9 +153,11 @@
 
 - (IBAction)loginAction:(id)sender {
     
-    
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userAnsweredQuestions"]) {
-        [self navigateIntoApp];
+    if ([[FIRAuth auth] currentUser]) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userAnsweredQuestions"]) {
+            [self navigateIntoApp];
+            NSLog(@"----------Successfully logged In");
+        }
     }
     
     else
@@ -143,6 +166,8 @@
     [[FIRAuth auth] signInWithEmail:self.emailTextField.text password:self.passwordTextField.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
         if (!error) {
             NSLog(@"----------Successfully logged In");
+            [[NSUserDefaults standardUserDefaults] setObject:self.emailTextField.text forKey:@"email"];
+            [[NSUserDefaults standardUserDefaults] setObject:self.passwordTextField.text forKey:@"password"];
             [self askQuestions];
         }
         else

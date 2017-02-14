@@ -52,6 +52,27 @@
     return cell;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,5 +121,38 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+#pragma mark - Logout Action
+
+- (IBAction)logoutAction:(id)sender {
+    
+    NSError *signOutError;
+    
+    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+    
+    if (!status) {
+        NSLog(@"Error signing out: %@", signOutError);
+        return;
+    }
+    else
+    {
+        NSLog(@"----------User Signed Out");
+        
+        LoginViewController *lVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self presentViewController:lVC animated:YES completion:^{
+            nil;
+        }];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"email"];
+    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"password"];
+    
+}
+
+
+
+
 
 @end

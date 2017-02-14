@@ -10,6 +10,7 @@
 #import "LoginTextField.h"
 #import <FirebaseAuth/FirebaseAuth.h>
 #import "LoginViewController.h"
+#import "AskQuestionViewController.h"
 
 @interface SignUpViewController : UIViewController
 
@@ -20,5 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *checkButton;
 
 - (IBAction)checkAction:(id)sender;
+- (IBAction)signUpAction:(id)sender;
 
 @end

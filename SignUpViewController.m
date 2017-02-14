@@ -53,6 +53,37 @@ IB_DESIGNABLE
         self.checkButton.selected = !self.checkButton.selected;
         self.signUpButton.enabled = !self.signUpButton.enabled;
     }
+
+    
+    
+}
+
+
+- (void) alerts {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Successfully Signed Up" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        AskQuestionViewController *qVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AskQuestionViewController"];
+        [self presentViewController:qVC animated:YES completion:^{
+            nil;
+        }];
+        
+    }];
+    
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:^{
+        nil;
+    }];
+    
+    
+}
+
+
+
+- (void)signUpAction:(id)sender
+{
     
     
     [[FIRAuth auth]createUserWithEmail:self.emailTextField.text password:self.passwordTextField.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
@@ -64,40 +95,19 @@ IB_DESIGNABLE
         }
         else {
             NSLog(@"Error : %@", error.localizedDescription);
-         
+            
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction *action = [UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleCancel handler:nil];
             
             [alert addAction:action];
-            [self presentViewController:alert animated:YES completion:nil];
+            [self presentViewController:alert animated:YES completion:^{
+                nil;
+            }];
         }
     }];
     
-    
 }
-
-
-- (void) alerts {
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Successfully Signed Up" message:@"Please log in using email and password." preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        [self presentViewController:lvc animated:YES completion:^{
-            nil;
-        }];
-    }];
-    
-    [alert addAction:action];
-    [self presentViewController:alert animated:YES completion:nil];
-    
-    
-}
-
-
-
-
 
 
 

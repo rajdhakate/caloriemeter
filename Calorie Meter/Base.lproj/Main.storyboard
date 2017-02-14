@@ -125,6 +125,9 @@
                     <navigationItem key="navigationItem" title="Today's Food" id="Ba2-h1-xdz">
                         <barButtonItem key="leftBarButtonItem" image="logout_icon" id="blP-fH-oy9">
                             <inset key="imageInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                            <connections>
+                                <action selector="logoutAction:" destination="zZa-sl-SeK" id="L6V-T6-Sn0"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="IxE-2s-1bx">
                             <connections>
@@ -612,6 +615,9 @@
                                 <state key="normal" title="SIGNUP" backgroundImage="button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpAction:" destination="MXc-Zc-8gP" eventType="touchUpInside" id="pLM-eD-t0z"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calorie_meter_login_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ci7-NR-O4B">
                                 <rect key="frame" x="67" y="127" width="240" height="128"/>
@@ -760,6 +766,7 @@
                                 </state>
                                 <connections>
                                     <action selector="calculateAction:" destination="Koh-1S-b2E" eventType="touchUpInside" id="LYg-Yu-XgL"/>
+                                    <segue destination="OqC-XU-eHB" kind="show" id="j4B-5D-Ge4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill up some details to calculate your BMR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csz-fA-C4P">
@@ -833,7 +840,6 @@
                             </state>
                             <connections>
                                 <action selector="okayAction:" destination="Koh-1S-b2E" eventType="touchUpInside" id="fZd-8M-aTM"/>
-                                <segue destination="OqC-XU-eHB" kind="show" id="cdH-dX-3PL"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="calories everyday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-s5-QTn">

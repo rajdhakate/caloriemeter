@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Food.h"
 #import "ListTableViewCell.h"
+#import <FirebaseAuth/FirebaseAuth.h>
+#import "LoginViewController.h"
 
 @interface ListTableView : UITableViewController
 
+- (IBAction)logoutAction:(id)sender;
 
 @end
