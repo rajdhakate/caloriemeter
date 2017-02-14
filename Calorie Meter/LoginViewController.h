@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "LoginTextField.h"
 #import "RootViewController.h"
+#import <FirebaseAuth/FirebaseAuth.h>
+#import "ListTableView.h"
+#import "AskQuestionViewController.h"
 
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
 
@@ -24,5 +27,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *gotoSignUpButton;
 @property (weak, nonatomic) IBOutlet UIView *dividerView;
 
+- (IBAction)loginAction:(id)sender;
 
 @end

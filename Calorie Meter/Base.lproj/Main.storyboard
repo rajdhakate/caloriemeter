@@ -487,7 +487,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Koh-1S-b2E" kind="show" id="lrS-Sm-PYo"/>
+                                    <action selector="loginAction:" destination="F6y-dE-gmj" eventType="touchUpInside" id="S9C-UF-3uy"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ahi-Ia-x6P" userLabel="Google">
@@ -612,9 +612,6 @@
                                 <state key="normal" title="SIGNUP" backgroundImage="button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Koh-1S-b2E" kind="show" id="Trd-rj-fKS"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calorie_meter_login_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ci7-NR-O4B">
                                 <rect key="frame" x="67" y="127" width="240" height="128"/>
@@ -659,7 +656,7 @@
         <!--Ask Question View Controller-->
         <scene sceneID="bKg-RM-fWP">
             <objects>
-                <viewController id="Koh-1S-b2E" customClass="AskQuestionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AskQuestionViewController" id="Koh-1S-b2E" customClass="AskQuestionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GXR-ba-Yp6"/>
                         <viewControllerLayoutGuide type="bottom" id="eez-RR-tdQ"/>
@@ -744,7 +741,7 @@
                                         <rect key="frame" x="0.0" y="28" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eoe-yQ-xoy" id="HXh-zf-uCd">
-                                            <rect key="frame" x="0.0" y="0.0" width="97" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -850,7 +847,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1364" y="-623"/>
+            <point key="canvasLocation" x="1297" y="-743"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XMY-m5-Lev">
@@ -886,6 +883,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DCr-LF-3VH"/>
-        <segue reference="Trd-rj-fKS"/>
     </inferredMetricsTieBreakers>
 </document>

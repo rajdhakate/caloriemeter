@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginTextField.h"
+#import <FirebaseAuth/FirebaseAuth.h>
+#import "LoginViewController.h"
 
 @interface SignUpViewController : UIViewController
 

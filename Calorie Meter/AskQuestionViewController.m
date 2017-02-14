@@ -157,6 +157,7 @@
 
     [self.popUpView removeFromSuperview];
     [blurView removeFromSuperview];
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"userAnsweredQuestions"];
 
 }
 

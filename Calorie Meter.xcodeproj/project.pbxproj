@@ -28,7 +28,7 @@
 		D546114F1E3E4B2400C1A45D /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = D546114E1E3E4B2400C1A45D /* time.png */; };
 		D54611561E3E5BAE00C1A45D /* ListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D54611551E3E5BAE00C1A45D /* ListTableView.m */; };
 		D54611591E3E5BFA00C1A45D /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D54611581E3E5BFA00C1A45D /* ListTableViewCell.m */; };
-		D5C943611E5338860043A7A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5C943601E5338860043A7A8 /* GoogleService-Info.plist */; };
+		D59397971E53460A00789677 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D59397961E53460A00789677 /* GoogleService-Info.plist */; };
 		D5CCC8FC1E43177E006C5917 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCC8FB1E43177E006C5917 /* Food.m */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +69,7 @@
 		D54611551E3E5BAE00C1A45D /* ListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableView.m; sourceTree = "<group>"; };
 		D54611571E3E5BFA00C1A45D /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
 		D54611581E3E5BFA00C1A45D /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
-		D5C943601E5338860043A7A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D59397961E53460A00789677 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5CCC8FA1E43177E006C5917 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
 		D5CCC8FB1E43177E006C5917 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,7 +179,7 @@
 		D546112C1E3E464700C1A45D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D5C943601E5338860043A7A8 /* GoogleService-Info.plist */,
+				D59397961E53460A00789677 /* GoogleService-Info.plist */,
 				D546112F1E3E464700C1A45D /* AppDelegate.h */,
 				D54611301E3E464700C1A45D /* AppDelegate.m */,
 				D546112D1E3E464700C1A45D /* main.m */,
@@ -290,11 +290,11 @@
 			files = (
 				D546113C1E3E464700C1A45D /* LaunchScreen.storyboard in Resources */,
 				D54611481E3E47F700C1A45D /* food.png in Resources */,
-				D5C943611E5338860043A7A8 /* GoogleService-Info.plist in Resources */,
 				D546114F1E3E4B2400C1A45D /* time.png in Resources */,
 				D546114A1E3E480200C1A45D /* item.png in Resources */,
 				D54611451E3E476200C1A45D /* calories.png in Resources */,
 				D546114D1E3E4A2B00C1A45D /* heart.png in Resources */,
+				D59397971E53460A00789677 /* GoogleService-Info.plist in Resources */,
 				D54611391E3E464700C1A45D /* Assets.xcassets in Resources */,
 				D54611371E3E464700C1A45D /* Main.storyboard in Resources */,
 			);

@@ -10,16 +10,18 @@
 
 @interface LoginViewController ()
 {
+    //FIRUser *user;
 }
 
 @end
 
 @implementation LoginViewController
 
-IB_DESIGNABLE
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // user = [[FIRAuth auth]currentUser];
+    
     
     self.calorieIconImageView.alpha = 0;
     
@@ -102,21 +104,61 @@ IB_DESIGNABLE
 
 
 
+#pragma mark - Enter into App
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) navigateIntoApp
+{
+    UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+    
+    [self presentViewController:navVC animated:YES completion:^{
+        NSLog(@"----------User Already Signed In");
+    }];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (void) askQuestions
+{
+    AskQuestionViewController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"AskQuestionViewController"];
+    
+    [self presentViewController:navVC animated:YES completion:^{
+        NSLog(@"----------Logged In, ASk Questions");
+    }];
 }
-*/
 
+
+
+#pragma mark - Login Action
+
+- (IBAction)loginAction:(id)sender {
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userAnsweredQuestions"]) {
+        [self navigateIntoApp];
+    }
+    
+    else
+    {
+    
+    [[FIRAuth auth] signInWithEmail:self.emailTextField.text password:self.passwordTextField.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        if (!error) {
+            NSLog(@"----------Successfully logged In");
+            [self askQuestions];
+        }
+        else
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                self.emailTextField.text = @"";
+                self.passwordTextField.text = @"";
+            }];
+            
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }];
+        
+    }
+}
 @end

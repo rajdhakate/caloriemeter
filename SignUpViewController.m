@@ -46,17 +46,6 @@ IB_DESIGNABLE
 
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-
 #pragma mark - Check Box Action
 - (IBAction)checkAction:(id)sender {
     
@@ -65,5 +54,51 @@ IB_DESIGNABLE
         self.signUpButton.enabled = !self.signUpButton.enabled;
     }
     
+    
+    [[FIRAuth auth]createUserWithEmail:self.emailTextField.text password:self.passwordTextField.text completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+        if (!error) {
+            [self alerts];
+            NSLog(@"-----------User Created Successfully");
+            self.emailTextField.text = @"";
+            self.passwordTextField.text = @"";
+        }
+        else {
+            NSLog(@"Error : %@", error.localizedDescription);
+         
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleCancel handler:nil];
+            
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }];
+    
+    
 }
+
+
+- (void) alerts {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Successfully Signed Up" message:@"Please log in using email and password." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        LoginViewController *lvc = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        [self presentViewController:lvc animated:YES completion:^{
+            nil;
+        }];
+    }];
+    
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+}
+
+
+
+
+
+
+
 @end
