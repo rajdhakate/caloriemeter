@@ -56,7 +56,7 @@
     [UIView setAnimationDuration:1];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     self.calorieIconImageView.alpha = 1;
-    self.calorieIconImageView.frame = CGRectMake (67, 95, 240, 128);
+    self.calorieIconImageView.frame = CGRectMake (67, 127, 240, 128);
     // commit frame changes to be animated
     [UIView commitAnimations];
     
@@ -154,9 +154,13 @@
 - (IBAction)loginAction:(id)sender {
     
     if ([[FIRAuth auth] currentUser]) {
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userAnsweredQuestions"]) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"BMRRecorded"]) {
             [self navigateIntoApp];
             NSLog(@"----------Successfully logged In");
+        }
+        else
+        {
+            [self askQuestions];
         }
     }
     
@@ -168,6 +172,11 @@
             NSLog(@"----------Successfully logged In");
             [[NSUserDefaults standardUserDefaults] setObject:self.emailTextField.text forKey:@"email"];
             [[NSUserDefaults standardUserDefaults] setObject:self.passwordTextField.text forKey:@"password"];
+            
+            if ([[NSUserDefaults standardUserDefaults] objectForKey:@"BMRRecorded"]) {
+                [self navigateIntoApp];
+            }
+            else 
             [self askQuestions];
         }
         else
